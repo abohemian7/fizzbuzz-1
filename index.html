@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blank</title>
+    <title>&#9829</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,6 +18,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="main.js"></script>
     <![endif]-->
 </head>
 
@@ -25,10 +26,29 @@
 
 <div class="container">
 
-    <h1>Hello World!</h1>
-    <p class="lead">This is something!</p>
+    <h1>FizzBuzz</h1>
+    <p class="lead">enter a number</p>
+
+    <form>
+        <input type="text" name="inputNumber">
+        <button id = "btnExecute" ng-click="btnGo()">Go!</button>
+    </form>
+
+    <!--
+    <form>
+        <input type ="number" name="testNum">
+        <input type="submit">
+    </form>
+    -->
 
 </div><!-- /.container -->
+
+<div id="fizzy" ng-repeat="number in numbers">{{ number }}</div>
+
+<div class="container">
+    <br>
+    <div id="fizzBuzz"></div>
+</div>
 
 
 <!-- Bootstrap core JavaScript
