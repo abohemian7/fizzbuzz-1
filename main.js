@@ -4,34 +4,18 @@
 
 $(function(){
 
-        $scope.numbers = [1,2,3,4];
-        $scope.fizzNum = 1;
+        var num = 0;
 
-
-        $scope.calcFizzBuzz = function(num){
-
-            return (
-                (num%15)?
-                    (
-                        !(num%3)?"Fizz":
-                            (
-                                !(num%5)?"Buzz":num
-                            )
-                    )
-                    :"FizzBuzz"
-            );
-
+        var printNum = function(){
+            $('#output').html(num);
         };
 
-        $("#btnExecute").click(function(){
-                //calcFizzBuzz(10);
-                $('#fizzBuzz').html(10);
+        printNum();
+
+        $('#my-button').click(function(){
+                printNum();
             }
         );
-
-        var btnGo = function(){
-            $('#fizzBuzz').html(10);
-        }
 
     }
 );
